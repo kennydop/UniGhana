@@ -72,7 +72,7 @@ signup_form?.addEventListener("submit", (e) => {
 
 auth.onAuthStateChanged(async (user) => {
   if (user) {
-    if (!window.location.pathname.startsWith("/home")) {
+    if (!window.location.pathname.includes("/home")) {
       window.location.href = "home.html";
     }
     document.title = `Home - ${user.email}`;
@@ -81,8 +81,8 @@ auth.onAuthStateChanged(async (user) => {
     document.getElementById("logout").classList.remove("hidden");
   } else {
     if (
-      window.location.pathname.startsWith("/login") ||
-      window.location.pathname.startsWith("/register")
+      window.location.pathname.includes("/login") ||
+      window.location.pathname.includes("/register")
     ) {
       return;
     }
