@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>UniGhana</title>
+  </head>
+  <body>
+    <div class="signin">
+      <div class="left">
+        <div class="logo-container">
+          <img
+            class="logo"
+            src="./assets/logoipsum-293.svg"
+            alt="UniGhana Logo"
+          />
+          <p class="logo-text">UniGhana</p>
+        </div>
+        <div class="signin-side-container">
+          <img
+            src="./assets//undraw_login_re_4vu2.svg"
+            alt="Sign In Side Image"
+            class="signin-side"
+          />
+        </div>
+      </div>
+      <div class="right">
+        <div class="form-container">
+          <div class="form-header">
+            <h2 class="welcome">Welcome!</h2>
+            <p class="ctat">Enter details to login</p>
+          </div>
+          <div id="l-error" class="error"></div>
+          <form id="login-form">
+            <input
+              id="email"
+              type="email"
+              placeholder="Email"
+              class="email"
+              required="true"
+              autocomplete="email"
+            />
+            <input
+              id="password"
+              type="password"
+              placeholder="Password"
+              class="password"
+              required="true"
+              title="password"
+              minlength="6"
+              autocomplete="current-password"
+            />
+            <a href="/" class="npcta">FORGOT PASSWORD?</a>
+            <button id="login-btn" type="submit" class="submit">Login</button>
+            <div class="login-prompt">
+              <p>Don&apos;t have an account?</p>
+              <a href="/register.html" class="npcta">SIGN UP</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
